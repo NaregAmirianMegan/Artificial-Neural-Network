@@ -61,7 +61,7 @@ public class NeuralNetwork {
 	}
 	
 	/**
-	 * Adjust weights and biases using partial derivatives (i.e. gradient descent
+	 * Adjust weights and biases using partial derivatives (i.e. gradient descent)
 	 * @param XData
 	 * 				XData to be trained
 	 * @param YData
