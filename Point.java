@@ -1,7 +1,7 @@
 /**
  * Author: Nareg Amirian Megan
- * Title: Graph.java
- * Source Files: Point.java
+ * Title: Point.java
+ * Source Files: Graph.java
  * Purpose: Provide a simple graph functionality to graph error
  */
 
