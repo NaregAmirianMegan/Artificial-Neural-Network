@@ -16,7 +16,10 @@ public class NeuralNetwork {
 	private double LR, Bias1, Bias2, momentum;
 	//ArrayList to log error and efficiency
 	private ArrayList<Point> errorLog = new ArrayList<Point>();
-			
+	
+	//set graph scale depending on size of jpanel
+	private static int graphScale = 6;
+	
 	/**
 	 * Construct a Neural Network object
 	 * 
@@ -78,12 +81,12 @@ public class NeuralNetwork {
 		
 		//calculate error
 		Matrix globalE = (YData.subtract(output).abs());
-		double percentError = globalE.averageElements()*5;
+		double percentError = globalE.averageElements()*100;
 		
 		//add percent error to error log 
-		int step = iterations/1000;
+		int step = 100;
 		if(iteration % step == 0) {
-			errorLog.add(new Point(iteration/step, percentError));
+			errorLog.add(new Point(iteration/step*graphScale, percentError*graphScale));
 			System.out.println("Epoch " + iteration/step + ": \n   "
 					+ "Error: " + percentError);
 		}
