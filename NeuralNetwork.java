@@ -134,9 +134,11 @@ public class NeuralNetwork {
 		double percentError = globalE.averageElements()*5;
 		
 		//add percent error to error log 
-		int step = iterations/1000;
+		int step = 100;
 		if(iteration % step == 0) {
-			errorLog.add(new Point(iteration/step, percentError));
+			errorLog.add(new Point(iteration/step*graphScale, percentError*graphScale));
+			System.out.println("Epoch " + iteration/step + ": \n   "
+					+ "Error: %" + percentError);
 		}
 		
 		//back propagation
@@ -168,7 +170,7 @@ public class NeuralNetwork {
 			iteration++;
 		}
 		Graph graph = new Graph(errorLog);
-		graph.show();
+		graph.show("Iterations VS. Percent Error: MOMENTUM");
 	}
 	
 	/**
@@ -182,7 +184,7 @@ public class NeuralNetwork {
 			iteration++;
 		}
 		Graph graph = new Graph(errorLog);
-		graph.show();
+		graph.show("Iterations VS. Percent Error: NO MOMENTUM");
 	}
 	
 	/**
@@ -211,7 +213,7 @@ public class NeuralNetwork {
 	 * 				final error
 	 */
 	public double getFinalError() {
-		return (errorLog.get(errorLog.size()-1).getY()/5);
+		return (errorLog.get(errorLog.size()-1).getY()/graphScale);
 	}
 
 }
