@@ -56,6 +56,8 @@ Allow choice of activation functions. <br />
 
 ### Sample Error Log
 
+![errorlog](https://user-images.githubusercontent.com/22607081/34455159-8e26cc3c-ed3e-11e7-933e-c9793c7ea86c.JPG)
+
 Example Comparisons Between Momentum and No Momentum when modeling the XOR function. Each graph plots the global model error for each training iteration:
 
 ### NO MOMENTUM VS. MOMENTUM Graphs
