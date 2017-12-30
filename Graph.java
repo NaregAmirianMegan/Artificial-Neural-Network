@@ -30,7 +30,7 @@ public class Graph {
 	/**
 	 * Present graph with built in titles
 	 */
-	public void show() {
+	public void show(String title) {
 		JFrame frame = new JFrame("Error Graph");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				 
@@ -50,7 +50,7 @@ public class Graph {
 		panel.setLayout(new FlowLayout());
 		frame.add(panel);
 		panel.setBackground(new Color(0, 0, 0));
-		JLabel label = new JLabel("ITERATION vs. PERCENT ERROR");
+		JLabel label = new JLabel(title);
 		label.setLocation(40, 40);
 		label.setSize(100, 100);
 		panel.add(label);
