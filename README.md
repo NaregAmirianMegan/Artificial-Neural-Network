@@ -54,8 +54,12 @@ Allow choice of activation functions. <br />
 
 # Tests and Moving Forward
 
+### Sample Error Log
 
+Example Comparisons Between Momentum and No Momentum when modeling the XOR function. Each graph plots the global model error for each training iteration:
 
+### NO MOMENTUM VS. MOMENTUM Graphs
+![m_no-m_comparison](https://user-images.githubusercontent.com/22607081/34455125-e3102f96-ed3d-11e7-98a1-e192b65f3aa8.JPG)
 
 It is clear from both the percent error logs and graphs that the implementation of momentum in a neural network is often times beneficial because it trains the model to a lower error rate and it does this faster.
 In the future I would like to implement multi-layer functionality for the hidden layers as well as a dropout rate and a choice of activation functions. Multi-layer networks, or Deep Neural Nets, are better at modeling, dropout helps prevent overfitting, and other activation functions have recently been proven better than the sigmoid activation function (e.g., the rectified linear, or relu, function).
