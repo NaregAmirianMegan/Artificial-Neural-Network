@@ -47,10 +47,7 @@ Who’ = Who + 𝜹W ho
 
 
 
-# TO DO
-Implement a dropout rate to counteract potential overfitting by the use of momentum in the current model. <br />
-Implement multilayer functionality to improve models computational ability. <br />
-Allow choice of activation functions. <br />
+ <br />
 
 # Tests and Moving Forward
 
