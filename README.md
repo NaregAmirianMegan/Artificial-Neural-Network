@@ -8,43 +8,6 @@ Momentum is mathematically much like a bouncing ball on an error gradient. The s
 
 Concise mathematical explanation of forward and backward propagation in a three layer neural network using a sigmoid activation function, momentum, and stochastic gradient descent.
 
-Forward Propagation:<br />
-X = input data<br />
-Y = output data<br />
-Wxh = weights by which to multiply inputs (X)<br />
-Who = weights by which to multiply hidden layer(H) <br />
-H = hidden layer without sigmoid<br />
-H’ = hidden layer with sigmoid<br />
-O = output layer without sigmoid<br />
-O’ = output layer with sigmoid<br />
-σ(x) = 1/(1+e-x)<br />
-σ’(x) = σ(x) * (1 - σ(x))<br />
-
-H = Wxh * X<br />
-H’ = σ(H)<br />
-O = Who * H’<br />
-O’ = σ(O)<br />
-E = Y - O’<br />
-Back Propagation:<br />
-𝛂 = learning rate<br />
-m = momentum<br />
-𝜹 = change in subscript variable<br />
-𝜹prev = previous iterations change in subscript variable
-
-𝜹O = ∂E/∂O’ * ∂O’/∂O = ∂E/∂O
-
-𝜹W ho = 𝛂 * (𝜹O * H’)<br />
-𝜹W xh = 𝛂 * (𝜹O * Who * σ’(H’) * X)<br />
-
-𝜹W ho = (𝜹W hoprev * m) - 𝜹W ho<br />
-𝜹W xh = (𝜹W xhprev * m) - 𝜹W xh<br />
-
-Wxh’ = Wxh + 𝜹W xh<br />
-Who’ = Who + 𝜹W ho
-
-
-
-
 
 
  <br />
