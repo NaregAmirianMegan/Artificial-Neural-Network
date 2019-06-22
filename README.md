@@ -8,7 +8,7 @@ Momentum is mathematically much like a bouncing ball on an error gradient. The s
 
 Concise mathematical explanation of forward and backward propagation in a three layer neural network using a sigmoid activation function, momentum, and stochastic gradient descent.
 
-
+![](neural_net_math.png)
 
  <br />
 
